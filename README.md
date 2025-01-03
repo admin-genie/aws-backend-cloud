@@ -59,5 +59,5 @@ docker build -t backend .
 docker buildx build --platform linux/amd64 -t bakcend .
 
 docker run --net="host" -p 8080:8080 app:0.1 
-## 해당 도커 컨테이너에는 MySQL이 포함되어 있지 않으므로, 호스트 네트워크를 사용하도록 설정하고 DB URL 설정을 변경해야 한다.
+## 해당 도커 컨테이너에는 MySQL이 포함되어 있지 않으므로 호스트 네트워크를 사용하도록 설정하고 DB URL 설정을 변경해야 한다.
 ```
