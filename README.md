@@ -1,6 +1,9 @@
-# backend
-
-### JDK Version
+# Backend
+📌실습 링크
+[![Naver Blog Badge](https://img.shields.io/badge/Naver%20Blog-03C75A?style=flat&logo=Naver&logoColor=white)](https://blog.naver.com/genie290/223342482060)
+[![Naver Blog Badge](https://img.shields.io/badge/Naver%20Blog-03C75A?style=flat&logo=Naver&logoColor=white)](https://blog.naver.com/genie290/223492077252)
+---
+## 1. JDK Version
 - jDK 11 이상
 
 ### Modify with your MySQL info 
@@ -24,7 +27,7 @@ docker exec -it mysql-db bash
 # apt-get install -y vim
 # vi /etc/mysql/my.cnf
 ```
-### MySQL DB
+## 2. MySQL DB
 - Create DB Name : employee
 - (생성할 필요 없음) Create Table : employee
 - (생성할 필요 없음) Columns : id, email_address, first_name, last_name
@@ -52,10 +55,9 @@ java -jar employee-management-backend-0.0.1-SNAPSHOT.jar
 ```
 docker build -t backend .
 
-## Mac m1 에서는 이렇게 실행
+## Mac m1 실행의 경우
 docker buildx build --platform linux/amd64 -t bakcend .
 
 docker run --net="host" -p 8080:8080 app:0.1 
-## 이 도커안에는 mysql이 없으니까 host network를 사용하도록 설정
-## 도커끼리 통신할 수 있도록 하고 DB url설정 변경필요
+## 해당 도커 컨테이너에는 MySQL이 포함되어 있지 않으므로, 호스트 네트워크를 사용하도록 설정하고 DB URL 설정을 변경해야 한다.
 ```
